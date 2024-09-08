@@ -18,7 +18,7 @@ require github.com/jackyang-hk/grpc-registry-redis latest
 
 ### Reference example
 
-[server](../../../example/registry/etcd/http/server/server.go)
+server
 ```go
 package main
 
@@ -41,7 +41,7 @@ func main() {
 }
 ```
 
-[client](../../../example/registry/etcd/http/client/client.go)
+client
 ```go
 package main
 
@@ -72,3 +72,9 @@ func main() {
 	}
 }
 ```
+
+
+
+## License
+
+`GoFrame etcd` is licensed under the [MIT License](./LICENSE), 100% free and open-source, forever.
