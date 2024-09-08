@@ -6,11 +6,11 @@ Use `redis` as service registration and discovery management.
 
 ## Installation
 ```
-go get -u -v https://github.com/jackyang-hk/grpc-registry-redis
+go get -u -v github.com/jackyang-hk/grpc-registry-redis
 ```
 suggested using `go.mod`:
 ```
-require https://github.com/jackyang-hk/grpc-registry-redis latest
+require github.com/jackyang-hk/grpc-registry-redis latest
 ```
 
 
