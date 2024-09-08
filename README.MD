@@ -77,4 +77,4 @@ func main() {
 
 ## License
 
-`GoFrame etcd` is licensed under the [MIT License](./LICENSE), 100% free and open-source, forever.
+`GoFrame redis` is licensed under the [MIT License](./LICENSE), 100% free and open-source, forever.
