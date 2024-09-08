@@ -1,4 +1,4 @@
-module grpc-registry-redis
+module github.com/jackyang-hk/grpc-registry-redis
 
 go 1.21
 
