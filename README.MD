@@ -6,11 +6,11 @@ Use `redis` as service registration and discovery management.
 
 ## Installation
 ```
-go get -u -v github.com/gogf/gf/contrib/registry/etcd/v2
+go get -u -v https://github.com/jackyang-hk/grpc-registry-redis
 ```
 suggested using `go.mod`:
 ```
-require github.com/gogf/gf/contrib/registry/etcd/v2 latest
+require https://github.com/jackyang-hk/grpc-registry-redis latest
 ```
 
 
