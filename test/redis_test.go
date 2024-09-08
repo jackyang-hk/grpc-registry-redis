@@ -13,7 +13,7 @@ import (
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/test/gtest"
 	"github.com/gogf/gf/v2/util/guid"
-	"grpc-registry-redis"
+	"github.com/jackyang-hk/grpc-registry-redis"
 	"testing"
 )
 
