@@ -44,12 +44,7 @@ func (r *Registry) Register(ctx context.Context, service gsvc.Service) (gsvc.Ser
 func (r *Registry) Deregister(ctx context.Context, service gsvc.Service) error {
 	if usingList {
 		toRemoveKey := getRedisKey(r.Group, service.GetKey())
-		removeCount, err := g.Redis().LRem(ctx, getRedisGroupKey(r.Group), 0, toRemoveKey)
-		if err != nil {
-			g.Log().Errorf(ctx, "Deregister remove key:%s error:%s", toRemoveKey, err.Error())
-		} else {
-			g.Log().Infof(ctx, "Deregister remove key:%s count:%d", toRemoveKey, removeCount)
-		}
+		_, _ = g.Redis().LRem(ctx, getRedisGroupKey(r.Group), 0, toRemoveKey)
 	}
 	_, err := g.Redis().Del(ctx, getRedisKey(r.Group, service.GetKey()))
 	return err

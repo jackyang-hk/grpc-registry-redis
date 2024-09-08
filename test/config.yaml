@@ -1,0 +1,21 @@
+# GRPC Server.
+grpc:
+  address: ":8001"
+  name: "testrpc"
+  logPath: ""
+  logStdout: true
+  errorStack: true
+  errorLogEnabled: true
+  errorLogPattern: "error-{Ymd}.log"
+  accessLogEnabled: true
+  accessLogPattern: "access-{Ymd}.log"
+
+
+redis:
+  default:
+    address: 127.0.0.1:6379
+    db:      0
+    pass: changeme
+    maxIdle: 500
+    minIdle: 10
+    idleTimeout: 1d

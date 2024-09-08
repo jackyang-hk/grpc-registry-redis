@@ -4,7 +4,7 @@
 // If a copy of the MIT was not distributed with this file,
 // You can obtain one at https://github.com/gogf/gf.
 
-package redis
+package test
 
 import (
 	_ "github.com/gogf/gf/contrib/nosql/redis/v2"
@@ -13,15 +13,16 @@ import (
 	"github.com/gogf/gf/v2/os/gctx"
 	"github.com/gogf/gf/v2/test/gtest"
 	"github.com/gogf/gf/v2/util/guid"
+	"grpc-registry-redis"
 	"testing"
 )
 
 func TestRegistry(t *testing.T) {
 	var (
 		ctx      = gctx.GetInitCtx()
-		registry = New(``)
+		registry = redis.New(``)
 	)
-	grpcx.Resolver.Register(New("test"))
+	grpcx.Resolver.Register(redis.New("test"))
 	svc := &gsvc.LocalService{
 		Name:      guid.S(),
 		Endpoints: gsvc.NewEndpoints("127.0.0.1:8888"),
@@ -87,9 +88,9 @@ func TestRegistry(t *testing.T) {
 func TestWatch(t *testing.T) {
 	var (
 		ctx      = gctx.GetInitCtx()
-		registry = New(``)
+		registry = redis.New(``)
 	)
-	grpcx.Resolver.Register(New("test"))
+	grpcx.Resolver.Register(redis.New("test"))
 	svc1 := &gsvc.LocalService{
 		Name:      guid.S(),
 		Endpoints: gsvc.NewEndpoints("127.0.0.1:8888"),
